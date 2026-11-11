@@ -275,6 +275,23 @@
         "passwordEnv": ""
     },
     {
+        "id": "136aa03155834944",
+        "type": "global-config",
+        "env": [
+            {
+                "name": "testEnvVar",
+                "value": "sampleValue",
+                "type": "str"
+            },
+            {
+                "name": "base",
+                "value": "koli",
+                "type": "str"
+            }
+        ],
+        "modules": {}
+    },
+    {
         "id": "45bea4c7c2ab69f5",
         "type": "mqtt out",
         "z": "552bef9e8447924e",
@@ -1122,7 +1139,7 @@
         "finalize": "",
         "libs": [],
         "x": 420,
-        "y": 560,
+        "y": 600,
         "wires": [
             [
                 "024375489ad092b6"
@@ -1160,7 +1177,7 @@
         "name": "alarmInTrigger",
         "links": [],
         "x": 245,
-        "y": 560,
+        "y": 600,
         "wires": [
             [
                 "6da1685edf7f81de"
@@ -1193,7 +1210,7 @@
         "mode": "return",
         "links": [],
         "x": 585,
-        "y": 560,
+        "y": 600,
         "wires": []
     },
     {
@@ -1268,6 +1285,51 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "008697c1cad1dfc8",
+        "type": "function",
+        "z": "552bef9e8447924e",
+        "name": "BLE Addres by location",
+        "func": "const base = env.get('base');\n\n//Addresses\nconst addresses = {\n    koli: \"BE:60:09:00:02:27\"\n    //add home room later\n};\n\nmsg.payload = addresses[base];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 520,
+        "wires": [
+            [
+                "ad5f4f573dc5522a"
+            ]
+        ]
+    },
+    {
+        "id": "b52490cc9e95eb9d",
+        "type": "link in",
+        "z": "552bef9e8447924e",
+        "name": "bleAddress",
+        "links": [],
+        "x": 235,
+        "y": 520,
+        "wires": [
+            [
+                "008697c1cad1dfc8"
+            ]
+        ]
+    },
+    {
+        "id": "ad5f4f573dc5522a",
+        "type": "link out",
+        "z": "552bef9e8447924e",
+        "name": "link out 1",
+        "mode": "return",
+        "links": [],
+        "x": 605,
+        "y": 520,
+        "wires": []
     },
     {
         "id": "922e9045d72e267a",
