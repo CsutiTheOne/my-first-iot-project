@@ -1,0 +1,2549 @@
+[
+    {
+        "id": "552bef9e8447924e",
+        "type": "tab",
+        "label": "Alarm",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2bfe3eded41fcf09",
+        "type": "tab",
+        "label": "Olla",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b2a31b5d212f1d33",
+        "type": "tab",
+        "label": "LightSensor",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9a04a22ed3e414b4",
+        "type": "tab",
+        "label": "GeneralFlows",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4f32973938074caf",
+        "type": "junction",
+        "z": "552bef9e8447924e",
+        "x": 920,
+        "y": 380,
+        "wires": [
+            [
+                "4e053400dcc03701",
+                "201c3246ab0fcbf1",
+                "98f525a3ca664eed",
+                "97ad34a3892eacf0"
+            ]
+        ]
+    },
+    {
+        "id": "f52bdd0175e7a595",
+        "type": "junction",
+        "z": "552bef9e8447924e",
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "f6ba2ba50246d0ec",
+                "1adf5c5201960b19",
+                "1b6f00f560d50aa7"
+            ]
+        ]
+    },
+    {
+        "id": "8f25f3194feb2b2a",
+        "type": "junction",
+        "z": "552bef9e8447924e",
+        "x": 680,
+        "y": 380,
+        "wires": [
+            [
+                "baa50122a9f51c98"
+            ]
+        ]
+    },
+    {
+        "id": "97ad34a3892eacf0",
+        "type": "junction",
+        "z": "552bef9e8447924e",
+        "x": 980,
+        "y": 480,
+        "wires": [
+            [
+                "119e90cb1f54fa8b",
+                "d4c5deeaf5cd7a28"
+            ]
+        ]
+    },
+    {
+        "id": "ec706f44e3e093bb",
+        "type": "junction",
+        "z": "552bef9e8447924e",
+        "x": 860,
+        "y": 860,
+        "wires": [
+            [
+                "4aa08a1dd12616cb"
+            ]
+        ]
+    },
+    {
+        "id": "c3e89c64c905d4d7",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9bbb9fe0fe9e5721",
+        "type": "ui-base",
+        "name": "Light Sensor",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "aa407d271ecacc8e",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "de132a5b6a5c9c6e",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "9bbb9fe0fe9e5721",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "aa407d271ecacc8e",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "tabs": [],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "748627a97692d459",
+        "type": "ui-group",
+        "name": "Awesome Alarm",
+        "page": "de132a5b6a5c9c6e",
+        "width": "3",
+        "height": 1,
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "2aa64ace8f88f87d",
+        "type": "ui-group",
+        "name": "Light Sensor",
+        "page": "de132a5b6a5c9c6e",
+        "width": 6,
+        "height": 1,
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "6358f96e72d8938b",
+        "type": "ui-group",
+        "name": "Water in olla",
+        "page": "de132a5b6a5c9c6e",
+        "width": "3",
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "3e8160c123cc6ffc",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": 5432,
+        "portFieldType": "num",
+        "database": "iot",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": 10,
+        "maxFieldType": "num",
+        "idle": 1000,
+        "idleFieldType": "num",
+        "connectionTimeout": 10000,
+        "connectionTimeoutFieldType": "num",
+        "userFieldType": "cred",
+        "userEnv": "",
+        "passwordFieldType": "cred",
+        "passwordEnv": ""
+    },
+    {
+        "id": "45bea4c7c2ab69f5",
+        "type": "mqtt out",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "topic": "home/pc/alarm/start",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c3e89c64c905d4d7",
+        "x": 1420,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "119e90cb1f54fa8b",
+        "type": "wake on lan",
+        "z": "552bef9e8447924e",
+        "d": true,
+        "mac": "88:a4:c2:0d:fd:e0",
+        "host": "152.66.180.127",
+        "udpport": 9,
+        "numpackets": 3,
+        "interval": 100,
+        "name": "WOL Koli",
+        "x": 1120,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4e053400dcc03701",
+        "type": "delay",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "15",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1120,
+        "y": 340,
+        "wires": [
+            [
+                "45bea4c7c2ab69f5"
+            ]
+        ]
+    },
+    {
+        "id": "6b41a42674eb7dfd",
+        "type": "inject",
+        "z": "552bef9e8447924e",
+        "d": true,
+        "name": "Alarm Schedule A",
+        "props": [],
+        "repeat": "",
+        "crontab": "40 07 * * 1,2,3,4,5",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea10cc081dc5711b",
+        "type": "ui-text",
+        "z": "552bef9e8447924e",
+        "group": "748627a97692d459",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "last trieggered",
+        "label": "Alarm last triggered",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "timestamp",
+        "valueType": "msg",
+        "x": 1400,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f6ba2ba50246d0ec",
+        "type": "mqtt out",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "topic": "home/pc/alarm/stop",
+        "qos": "2",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c3e89c64c905d4d7",
+        "x": 490,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "62b20528d12881b3",
+        "type": "inject",
+        "z": "552bef9e8447924e",
+        "name": "just stop alarm",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "home/pc/alarm/start",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "f52bdd0175e7a595"
+            ]
+        ]
+    },
+    {
+        "id": "201c3246ab0fcbf1",
+        "type": "exec",
+        "z": "552bef9e8447924e",
+        "command": "/home/csuti/Development/LedDimmer/venv/bin/python /home/csuti/Development/LedDimmer/dimup.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Dim up led strip",
+        "x": 1140,
+        "y": 280,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1b6f00f560d50aa7",
+        "type": "delay",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [
+                "f22a488dd91e8dbf"
+            ]
+        ]
+    },
+    {
+        "id": "f22a488dd91e8dbf",
+        "type": "exec",
+        "z": "552bef9e8447924e",
+        "command": "/home/csuti/Development/LedDimmer/venv/bin/python /home/csuti/Development/LedDimmer/purge.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Turn off led",
+        "x": 650,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            [
+                "64a02e19d1b5fbc6"
+            ]
+        ]
+    },
+    {
+        "id": "bce39fbd68a40068",
+        "type": "ui-button",
+        "z": "552bef9e8447924e",
+        "group": "748627a97692d459",
+        "name": "resetAlarm_btn",
+        "label": "Reset",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "f52bdd0175e7a595"
+            ]
+        ]
+    },
+    {
+        "id": "921e7b401e91d892",
+        "type": "exec",
+        "z": "552bef9e8447924e",
+        "command": "bluetoothctl disconnect",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1060,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "64a02e19d1b5fbc6",
+        "type": "delay",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 100,
+        "wires": [
+            [
+                "921e7b401e91d892"
+            ]
+        ]
+    },
+    {
+        "id": "3ae416606290b7c8",
+        "type": "ui-button",
+        "z": "552bef9e8447924e",
+        "group": "748627a97692d459",
+        "name": "manualTrigger_btn",
+        "label": "Manually Start",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 390,
+        "y": 280,
+        "wires": [
+            [
+                "8f25f3194feb2b2a"
+            ]
+        ]
+    },
+    {
+        "id": "1adf5c5201960b19",
+        "type": "change",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "kill",
+                "pt": "msg",
+                "to": "SIGINT",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "201c3246ab0fcbf1"
+            ]
+        ]
+    },
+    {
+        "id": "baa50122a9f51c98",
+        "type": "change",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "start",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "home/pc/alarm/start",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "msg",
+                "to": "iso",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 380,
+        "wires": [
+            [
+                "4f32973938074caf"
+            ]
+        ]
+    },
+    {
+        "id": "39277fb3bc9dffbb",
+        "type": "inject",
+        "z": "552bef9e8447924e",
+        "d": true,
+        "name": "Alarm Schedule B",
+        "props": [],
+        "repeat": "",
+        "crontab": "20 09 * * 6,0",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "98f525a3ca664eed",
+        "type": "moment",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "topic": "",
+        "input": "timestamp",
+        "inputType": "global",
+        "inTz": "Europe/Budapest",
+        "adjAmount": "0",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "YYYY.MM.DD hh:mm",
+        "locale": "C",
+        "output": "timestamp",
+        "outputType": "msg",
+        "outTz": "Europe/Budapest",
+        "x": 1160,
+        "y": 400,
+        "wires": [
+            [
+                "ea10cc081dc5711b"
+            ]
+        ]
+    },
+    {
+        "id": "d4c5deeaf5cd7a28",
+        "type": "wake on lan",
+        "z": "552bef9e8447924e",
+        "d": true,
+        "mac": "88:a4:c2:0d:fd:e0",
+        "host": "152.66.180.127",
+        "udpport": 9,
+        "numpackets": 3,
+        "interval": 100,
+        "name": "WOL wifi",
+        "x": 1120,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5fdf0e968fe3139a",
+        "type": "mqtt out",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "topic": "home/pc/alarm/next",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "c3e89c64c905d4d7",
+        "x": 810,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "e3ebca283f33383a",
+        "type": "ui-form",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "group": "748627a97692d459",
+        "label": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "time",
+                "key": "time",
+                "type": "time",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "mon",
+                "key": "mon",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "tue",
+                "key": "tue",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "wed",
+                "key": "wed",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "thu",
+                "key": "thu",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "fri",
+                "key": "fri",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "sat",
+                "key": "sat",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "sun",
+                "key": "sun",
+                "type": "checkbox",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "time": "",
+            "mon": false,
+            "tue": false,
+            "wed": false,
+            "thu": false,
+            "fri": false,
+            "sat": false,
+            "sun": false
+        },
+        "payload": "",
+        "submit": "Set",
+        "cancel": "",
+        "resetOnSubmit": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "passthru": false,
+        "dropdownOptions": [],
+        "x": 890,
+        "y": 800,
+        "wires": [
+            [
+                "c03dd8a70f3d775f"
+            ]
+        ]
+    },
+    {
+        "id": "c03dd8a70f3d775f",
+        "type": "function",
+        "z": "552bef9e8447924e",
+        "name": "Form data to query params",
+        "func": "let days = [\n    msg.payload.sun,\n    msg.payload.mon, \n    msg.payload.tue,\n    msg.payload.wed,\n    msg.payload.thu,\n    msg.payload.fri,\n    msg.payload.sat\n];\n\n/*\nlet nextIn = 0;\nfor (let i = 1; i < 7; i++) {\n    if(!days[global.dayOfWeek + i]) {\n        nextIn++;\n    }\n    break;\n}\n*/\n\nlet schedule = {\n    time: msg.payload.time,\n    days: days\n};\nmsg.alarmSchedule = schedule;\nmsg.params = [schedule];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 800,
+        "wires": [
+            [
+                "9373539f1e72166b",
+                "4aa08a1dd12616cb"
+            ]
+        ]
+    },
+    {
+        "id": "4aa08a1dd12616cb",
+        "type": "change",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "alarmSchedule",
+                "pt": "global",
+                "to": "alarmSchedule",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 860,
+        "wires": [
+            [
+                "a544ba2ddc92c1e8"
+            ]
+        ]
+    },
+    {
+        "id": "9373539f1e72166b",
+        "type": "postgresql",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "query": "UPDATE settings\nSET\n    json_value = $1\nWHERE\n    key = 'alarmSchedule';",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1370,
+        "y": 800,
+        "wires": [
+            [
+                "763212511ab14cfc",
+                "92c4527323afaf9e"
+            ]
+        ]
+    },
+    {
+        "id": "fa42a5fbea114451",
+        "type": "ui-event",
+        "z": "552bef9e8447924e",
+        "ui": "9bbb9fe0fe9e5721",
+        "name": "",
+        "x": 210,
+        "y": 800,
+        "wires": [
+            [
+                "d865bfac09f74428"
+            ]
+        ]
+    },
+    {
+        "id": "097fe7ade612891a",
+        "type": "postgresql",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "query": "SELECT json_value \nFROM settings \nWHERE key = 'alarmSchedule';",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 510,
+        "y": 800,
+        "wires": [
+            [
+                "2dc5f6145a952144"
+            ]
+        ]
+    },
+    {
+        "id": "2dc5f6145a952144",
+        "type": "function",
+        "z": "552bef9e8447924e",
+        "name": "Query to form data",
+        "func": "let alarmSchedule = msg.payload[0].json_value;\n\nlet formData = {\n    'time': alarmSchedule[\"time\"]\n}\n\nlet days = [\"sun\",\"mon\",\"tue\",\"wed\",\"thu\",\"fri\",\"sat\"];\n\n\nfor (let i = 0; i < days.length; i++) {\n    formData[days[i]] = alarmSchedule[\"days\"][i]\n}\nmsg.payload = formData;\nmsg.alarmSchedule = alarmSchedule;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 800,
+        "wires": [
+            [
+                "e3ebca283f33383a",
+                "ec706f44e3e093bb"
+            ]
+        ]
+    },
+    {
+        "id": "d865bfac09f74428",
+        "type": "switch",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "$pageview",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 800,
+        "wires": [
+            [
+                "097fe7ade612891a"
+            ]
+        ]
+    },
+    {
+        "id": "f65c8a8436642915",
+        "type": "inject",
+        "z": "552bef9e8447924e",
+        "name": "alarmSchedule on boot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 900,
+        "wires": [
+            [
+                "097fe7ade612891a"
+            ]
+        ]
+    },
+    {
+        "id": "b0178527a610f9ba",
+        "type": "inject",
+        "z": "552bef9e8447924e",
+        "name": "AlarmTrigger",
+        "props": [],
+        "repeat": "30",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "272c8ffa7fcc393f"
+            ]
+        ]
+    },
+    {
+        "id": "272c8ffa7fcc393f",
+        "type": "function",
+        "z": "552bef9e8447924e",
+        "name": "function 4",
+        "func": "const schedule = global.get(\"alarmSchedule\");\nconst dayOfWeek = global.get(\"dayOfWeek\");\n\nif (!schedule || !schedule.days?.[dayOfWeek]) {\n    return null;\n}\n\n// Get current date and time in Hungary\nconst now = new Date();\n\nconst formatter = new Intl.DateTimeFormat(\"en-GB\", {\n    timeZone: \"Europe/Budapest\",\n    year: \"numeric\",\n    month: \"2-digit\",\n    day: \"2-digit\",\n    hour: \"2-digit\",\n    minute: \"2-digit\",\n    hourCycle: \"h23\"\n});\n\nconst parts = formatter.formatToParts(now);\nconst get = type => parts.find(p => p.type === type).value;\n\nconst currentTime = `${get(\"hour\")}:${get(\"minute\")}`;\nconst today = `${get(\"year\")}-${get(\"month\")}-${get(\"day\")}`;\n\n// Check alarm time\nif (currentTime !== schedule.time) {\n    return null;\n}\n\n// Prevent duplicate triggers\nconst triggerKey = `${today}_${currentTime}`;\n\nif (context.get(\"lastTriggered\") === triggerKey) {\n    return null;\n}\n\ncontext.set(\"lastTriggered\", triggerKey);\n\n// Trigger next chain\nmsg.payload = {\n    event: \"alarm\",\n    time: currentTime\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 380,
+        "wires": [
+            [
+                "eaa143da4781d808"
+            ]
+        ]
+    },
+    {
+        "id": "737734b6186ba126",
+        "type": "mqtt in",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "topic": "home/pi/alarm/next",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c3e89c64c905d4d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 330,
+        "y": 680,
+        "wires": [
+            [
+                "682a955a987310c1"
+            ]
+        ]
+    },
+    {
+        "id": "763212511ab14cfc",
+        "type": "ui-notification",
+        "z": "552bef9e8447924e",
+        "ui": "9bbb9fe0fe9e5721",
+        "position": "top right",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Alarm set",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "Alarm set",
+        "x": 1600,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6da1685edf7f81de",
+        "type": "function",
+        "z": "552bef9e8447924e",
+        "name": "Nex alarm in:...",
+        "func": "const alarmSchedule = global.get('alarmSchedule');\nconst [aHours, aMinutes] = alarmSchedule.time.split(\":\").map(Number);\n\nconst alarmTime = aHours*60 + aMinutes;\n\n//today is yet to be done\nconst now = new Date();\nconst nowTime = now.getHours()*60 + now.getMinutes();\nconst todayDoneOffset = Number(nowTime > alarmTime);\n\n// next days\nlet nextDays = todayDoneOffset;\nconst len = alarmSchedule.days.length;\nlet index = 0;\nfor (let i = 0; i < len; i++) {\n    index = (global.get(\"dayOfWeek\") + todayDoneOffset + i) % len;\n    if (alarmSchedule.days[index]) break;\n    nextDays++;\n}\n\nmsg.payload = `${nextDays} days ${alarmSchedule.time}`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 560,
+        "wires": [
+            [
+                "024375489ad092b6"
+            ]
+        ]
+    },
+    {
+        "id": "16fd3cda05a2508b",
+        "type": "ui-text",
+        "z": "552bef9e8447924e",
+        "group": "748627a97692d459",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "nextAlarmIn",
+        "label": "Next:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1850,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "baca0a1140afc5a3",
+        "type": "link in",
+        "z": "552bef9e8447924e",
+        "name": "alarmInTrigger",
+        "links": [],
+        "x": 245,
+        "y": 560,
+        "wires": [
+            [
+                "6da1685edf7f81de"
+            ]
+        ]
+    },
+    {
+        "id": "682a955a987310c1",
+        "type": "link call",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "links": [
+            "baca0a1140afc5a3"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 560,
+        "y": 680,
+        "wires": [
+            [
+                "5fdf0e968fe3139a"
+            ]
+        ]
+    },
+    {
+        "id": "024375489ad092b6",
+        "type": "link out",
+        "z": "552bef9e8447924e",
+        "name": "alarmInOut",
+        "mode": "return",
+        "links": [],
+        "x": 585,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a544ba2ddc92c1e8",
+        "type": "link call",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "links": [
+            "baca0a1140afc5a3"
+        ],
+        "linkType": "static",
+        "timeout": "10",
+        "x": 1660,
+        "y": 860,
+        "wires": [
+            [
+                "16fd3cda05a2508b"
+            ]
+        ]
+    },
+    {
+        "id": "eaa143da4781d808",
+        "type": "delay",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 520,
+        "y": 380,
+        "wires": [
+            [
+                "8f25f3194feb2b2a"
+            ]
+        ]
+    },
+    {
+        "id": "af2b409636690621",
+        "type": "link in",
+        "z": "552bef9e8447924e",
+        "name": "alarmChanged",
+        "links": [],
+        "x": 405,
+        "y": 720,
+        "wires": [
+            [
+                "682a955a987310c1"
+            ]
+        ]
+    },
+    {
+        "id": "92c4527323afaf9e",
+        "type": "link call",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "links": [
+            "af2b409636690621"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 1620,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "922e9045d72e267a",
+        "type": "mqtt in",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "topic": "home/sensors/olla_1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c3e89c64c905d4d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "a222811385ee3848",
+                "1f087bf658af79ac",
+                "0ab2c93c5c6b690a",
+                "43839cef118992f9",
+                "4ad471fd2f9b222c"
+            ]
+        ]
+    },
+    {
+        "id": "a222811385ee3848",
+        "type": "ui-text",
+        "z": "2bfe3eded41fcf09",
+        "group": "6358f96e72d8938b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current value: ",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": true,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 440,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "86dca19abb387e67",
+        "type": "ui-chart",
+        "z": "2bfe3eded41fcf09",
+        "group": "6358f96e72d8938b",
+        "name": "",
+        "label": "Level over time",
+        "order": 3,
+        "chartType": "line",
+        "category": "sensor",
+        "categoryType": "property",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "timestamp",
+        "xAxisPropertyType": "property",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Empty/Low/High",
+        "yAxisProperty": "reading",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "2",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "7",
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 880,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f5fff2f5d9c001d",
+        "type": "ui-text",
+        "z": "2bfe3eded41fcf09",
+        "group": "6358f96e72d8938b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Last reading:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "timestamp",
+        "valueType": "msg",
+        "x": 670,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "916c044c6899ef1d",
+        "type": "switch",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 220,
+        "wires": [
+            [
+                "bfe6688ad1aad8b6"
+            ]
+        ]
+    },
+    {
+        "id": "1f087bf658af79ac",
+        "type": "rbe",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "916c044c6899ef1d"
+            ]
+        ]
+    },
+    {
+        "id": "febf842775b94c0b",
+        "type": "exec",
+        "z": "2bfe3eded41fcf09",
+        "command": "python /home/csuti/Development/mail/mail.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 1050,
+        "y": 220,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "43839cef118992f9",
+        "type": "moment",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "topic": "",
+        "input": "timestamp",
+        "inputType": "global",
+        "inTz": "Europe/Budapest",
+        "adjAmount": "0",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "YYYY.MM.DD hh:mm",
+        "locale": "C",
+        "output": "timestamp",
+        "outputType": "msg",
+        "outTz": "Europe/Budapest",
+        "x": 460,
+        "y": 280,
+        "wires": [
+            [
+                "4f5fff2f5d9c001d"
+            ]
+        ]
+    },
+    {
+        "id": "583fbdcacd55dad7",
+        "type": "postgresql",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "query": "INSERT INTO sensor_readings ( sensor, reading )\nVALUES ($1, $2);",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 670,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ab2c93c5c6b690a",
+        "type": "function",
+        "z": "2bfe3eded41fcf09",
+        "name": "function 2",
+        "func": "// Destructure the properties from msg.payload (obtained data by using form)\nconst value = msg.payload;\n// Create an array containing name, price, and stock\n// The order of the array items in msg.params will correspond to the placeholders in the SQL query\n// For example, $1 will be replaced by the value of name, $2 will be replaced by the value of the price, and so on\nmsg.params = [\"olla_1\", value];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 420,
+        "wires": [
+            [
+                "583fbdcacd55dad7"
+            ]
+        ]
+    },
+    {
+        "id": "fbf8c320f48b0e25",
+        "type": "postgresql",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "query": "SELECT\n    (EXTRACT(EPOCH FROM timestamp) * 1000)::DOUBLE PRECISION AS timestamp,\n    reading,\n    sensor\nFROM sensor_readings\nWHERE \n    sensor = 'olla_1'\n    and timestamp > now() - interval '7 day'\nORDER BY timestamp ASC;",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 670,
+        "y": 360,
+        "wires": [
+            [
+                "86dca19abb387e67"
+            ]
+        ]
+    },
+    {
+        "id": "4ad471fd2f9b222c",
+        "type": "delay",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 360,
+        "wires": [
+            [
+                "fbf8c320f48b0e25"
+            ]
+        ]
+    },
+    {
+        "id": "bfe6688ad1aad8b6",
+        "type": "template",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\"Message from olla: Not enough water\"",
+        "output": "str",
+        "x": 760,
+        "y": 220,
+        "wires": [
+            [
+                "febf842775b94c0b"
+            ]
+        ]
+    },
+    {
+        "id": "1652b5904dc031e3",
+        "type": "mqtt in",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "topic": "home/sensors/light",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "c3e89c64c905d4d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "a8b9861b7806a972",
+                "85c05e613c7894fd",
+                "7d28d7e1d6c5e81f",
+                "12956dc03e6c65c9",
+                "519436bb567723e5"
+            ]
+        ]
+    },
+    {
+        "id": "a8b9861b7806a972",
+        "type": "ui-text",
+        "z": "b2a31b5d212f1d33",
+        "group": "2aa64ace8f88f87d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Current value: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 460,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c3294f9530459ed1",
+        "type": "ui-chart",
+        "z": "b2a31b5d212f1d33",
+        "group": "2aa64ace8f88f87d",
+        "name": "",
+        "label": "Light % over time",
+        "order": 5,
+        "chartType": "line",
+        "category": "sensor",
+        "categoryType": "property",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "timestamp",
+        "xAxisPropertyType": "property",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "{HH}:{mm}",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Light %",
+        "yAxisProperty": "reading",
+        "yAxisPropertyType": "property",
+        "ymin": "0",
+        "ymax": "100",
+        "bins": 10,
+        "action": "replace",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "7",
+        "removeOlderUnit": "86400",
+        "removeOlderPoints": "",
+        "colors": [
+            "#ff0000",
+            "#0095ff",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 910,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5478d38c978ec17",
+        "type": "ui-text",
+        "z": "b2a31b5d212f1d33",
+        "group": "2aa64ace8f88f87d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Last reading:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "timestamp",
+        "valueType": "msg",
+        "x": 690,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "85c05e613c7894fd",
+        "type": "moment",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "topic": "",
+        "input": "timestamp",
+        "inputType": "global",
+        "inTz": "Europe/Budapest",
+        "adjAmount": "0",
+        "adjType": "hours",
+        "adjDir": "add",
+        "format": "YYYY.MM.DD hh:mm",
+        "locale": "C",
+        "output": "timestamp",
+        "outputType": "msg",
+        "outTz": "Europe/Budapest",
+        "x": 480,
+        "y": 100,
+        "wires": [
+            [
+                "c5478d38c978ec17"
+            ]
+        ]
+    },
+    {
+        "id": "6693594ac5d8117e",
+        "type": "postgresql",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "query": "INSERT INTO sensor_readings ( sensor, reading )\nVALUES ($1, $2);",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 690,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d28d7e1d6c5e81f",
+        "type": "function",
+        "z": "b2a31b5d212f1d33",
+        "name": "function 3",
+        "func": "// Destructure the properties from msg.payload (obtained data by using form)\nconst value = msg.payload;\n// Create an array containing name, price, and stock\n// The order of the array items in msg.params will correspond to the placeholders in the SQL query\n// For example, $1 will be replaced by the value of name, $2 will be replaced by the value of the price, and so on\nmsg.params = [\"light_sensor\", value];\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 180,
+        "wires": [
+            [
+                "6693594ac5d8117e"
+            ]
+        ]
+    },
+    {
+        "id": "32edb4706c6af0a4",
+        "type": "postgresql",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "query": "SELECT\n    (EXTRACT(EPOCH FROM timestamp) * 1000)::DOUBLE PRECISION AS timestamp,\n    reading,\n    sensor\nFROM sensor_readings\nWHERE \n    sensor = 'light_sensor'\n    and timestamp > now() - interval '7 day'\nORDER BY timestamp ASC;",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 690,
+        "y": 240,
+        "wires": [
+            [
+                "c3294f9530459ed1"
+            ]
+        ]
+    },
+    {
+        "id": "12956dc03e6c65c9",
+        "type": "delay",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "32edb4706c6af0a4"
+            ]
+        ]
+    },
+    {
+        "id": "4d70bc893dc25a7c",
+        "type": "comment",
+        "z": "b2a31b5d212f1d33",
+        "name": "Accepting sensor reading",
+        "info": "",
+        "x": 210,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6683711785198a62",
+        "type": "comment",
+        "z": "b2a31b5d212f1d33",
+        "name": "Query readings from db",
+        "info": "",
+        "x": 900,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "48f32f23423427e0",
+        "type": "function",
+        "z": "b2a31b5d212f1d33",
+        "name": "Light integral",
+        "func": "// reolution should be in hours\n\nlet readings = msg.payload;\n\nlet lastDate = new Date(readings[readings.length-1]['timestamp']);\nlet phantomDate = new Date(lastDate);\nphantomDate.setTime(phantomDate.getTime() + 60 * 1000);\nlet phantomReading = {\n    'reading': 0,\n    'timestamp': phantomDate.toDateString()\n}\n\nlet integral = 0;\nlet d1, d2, val, delta;\nfor (let i = 0; i < readings.length-1; i++) {\n    d1 = new Date(readings[i]['timestamp']).getTime();\n    d2 = new Date(readings[i+1]['timestamp']).getTime();\n    val = readings[i]['reading'];\n    delta = (d2 - d1) / (60 * 60 * 1000);\n    integral += val * delta;\n}\nmsg.payload = integral;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 500,
+        "wires": [
+            [
+                "e4e19b513fc7708e",
+                "72a65efc2c88eb95"
+            ]
+        ]
+    },
+    {
+        "id": "9945c8f15db9debe",
+        "type": "postgresql",
+        "z": "b2a31b5d212f1d33",
+        "name": "Light readings",
+        "query": "SELECT\n    reading,\n    timestamp \nFROM sensor_readings\nWHERE \n    sensor = 'light_sensor'\n    and timestamp > now() - interval '7 day';",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 840,
+        "y": 500,
+        "wires": [
+            [
+                "48f32f23423427e0"
+            ]
+        ]
+    },
+    {
+        "id": "519436bb567723e5",
+        "type": "postgresql",
+        "z": "b2a31b5d212f1d33",
+        "name": "Has 1 week data?",
+        "query": "select max(timestamp) is not null as has_1_week\nfrom sensor_readings\nwhere\n\ttimestamp < now() - interval '7 day';",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 390,
+        "y": 500,
+        "wires": [
+            [
+                "69a5d1303095a86f"
+            ]
+        ]
+    },
+    {
+        "id": "69a5d1303095a86f",
+        "type": "switch",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "property": "payload[0]['has_1_week']",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "28d2d1c12eeefee4"
+            ],
+            [
+                "9945c8f15db9debe"
+            ]
+        ]
+    },
+    {
+        "id": "e4e19b513fc7708e",
+        "type": "ui-text",
+        "z": "b2a31b5d212f1d33",
+        "group": "2aa64ace8f88f87d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Last week ∫ =",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1270,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "28d2d1c12eeefee4",
+        "type": "template",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Not enough data!",
+        "output": "str",
+        "x": 1060,
+        "y": 420,
+        "wires": [
+            [
+                "e4e19b513fc7708e",
+                "08d2df3d1a876fc5"
+            ]
+        ]
+    },
+    {
+        "id": "40a224e331db5830",
+        "type": "rbe",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 1410,
+        "y": 620,
+        "wires": [
+            [
+                "a0c30254f53042bb"
+            ]
+        ]
+    },
+    {
+        "id": "aa72d1599b863a07",
+        "type": "ui-dropdown",
+        "z": "b2a31b5d212f1d33",
+        "group": "2aa64ace8f88f87d",
+        "name": "lightNeed_dropdown",
+        "label": "Light requirement",
+        "tooltip": "",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "full sun",
+                "value": "sun",
+                "type": "str"
+            },
+            {
+                "label": "part sun",
+                "value": "part_sun",
+                "type": "str"
+            },
+            {
+                "label": "part shade",
+                "value": "part_shade",
+                "type": "str"
+            },
+            {
+                "label": "full shade",
+                "value": "shade",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 940,
+        "y": 860,
+        "wires": [
+            [
+                "e225906a1b8a58fa",
+                "52f3d0aa2bfff300"
+            ]
+        ]
+    },
+    {
+        "id": "abf30f04508a7285",
+        "type": "ui-switch",
+        "z": "b2a31b5d212f1d33",
+        "name": "wrongLight_swtch",
+        "label": "Notify for inappropriate light",
+        "group": "2aa64ace8f88f87d",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 950,
+        "y": 820,
+        "wires": [
+            [
+                "ccc211816731d2bd",
+                "3953f6968060bc87"
+            ]
+        ]
+    },
+    {
+        "id": "72a65efc2c88eb95",
+        "type": "function",
+        "z": "b2a31b5d212f1d33",
+        "name": "function 1",
+        "func": "//weekly integral by hours\nconst integral = msg.payload;\n\n//border values by sin integrals noted down\n//daily by hours\nconst border = [\n    152.789,\n    267.380,\n    381.972\n];\n\nconst lightReq = global.get(\"lightRequirement\");\n\nconst lightLevels = [\n    \"shade\",\n    \"part_shade\",\n    \"part_sun\",\n    \"sun\"\n];\nconst lightLevelIndex = lightLevels.indexOf(lightReq);\nlet tooMuch = false;\nlet tooLittle = false;\n\nif(lightLevelIndex > 0) {\n    let minReq = border[lightLevelIndex-1] * 7;\n    tooLittle = integral < minReq;\n}\nif(lightLevelIndex < lightLevels.length-1) {\n    let maxReq = border[lightLevelIndex] * 7;\n    tooMuch = integral > maxReq;\n}\nlet appropriate = \"Appropriate light\";\nif (tooMuch) {\n    appropriate = \"Too much light!\";\n} else if (tooLittle) {\n    appropriate = \"Too little light!\"\n}\nmsg.payload = appropriate;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 560,
+        "wires": [
+            [
+                "08d2df3d1a876fc5",
+                "40a224e331db5830"
+            ]
+        ]
+    },
+    {
+        "id": "08d2df3d1a876fc5",
+        "type": "ui-text",
+        "z": "b2a31b5d212f1d33",
+        "group": "2aa64ace8f88f87d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "lightAppropriateLabel",
+        "label": "Last week eval: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1540,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ccc211816731d2bd",
+        "type": "postgresql",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "query": "update settings\nset value = {{{msg.payload}}}\nwhere key = 'lightNotify';",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1190,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e225906a1b8a58fa",
+        "type": "postgresql",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "query": "update settings\nset value = '{{{msg.payload}}}'\nwhere key = 'lightRequirement';",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1190,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d04e85e2f0c8c514",
+        "type": "postgresql",
+        "z": "b2a31b5d212f1d33",
+        "name": "lightSettings",
+        "query": "SELECT key, value FROM settings where key in ('lightNotify', 'lightRequirement');",
+        "postgreSQLConfig": "3e8160c123cc6ffc",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 370,
+        "y": 840,
+        "wires": [
+            [
+                "c575a71c8b91cb4c"
+            ]
+        ]
+    },
+    {
+        "id": "dfd2c0603fd11568",
+        "type": "ui-event",
+        "z": "b2a31b5d212f1d33",
+        "ui": "9bbb9fe0fe9e5721",
+        "name": "",
+        "x": 70,
+        "y": 680,
+        "wires": [
+            [
+                "ace75e626822ab81"
+            ]
+        ]
+    },
+    {
+        "id": "ace75e626822ab81",
+        "type": "switch",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "$pageview",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 210,
+        "y": 680,
+        "wires": [
+            [
+                "d04e85e2f0c8c514",
+                "519436bb567723e5"
+            ]
+        ]
+    },
+    {
+        "id": "c575a71c8b91cb4c",
+        "type": "function",
+        "z": "b2a31b5d212f1d33",
+        "name": "Query to single obj",
+        "func": "const settingsQuery = msg.payload;\nlet settings = {};\nfor (let i = 0; i < settingsQuery.length; i++) {\n    settings[settingsQuery[i]['key']] = settingsQuery[i]['value'];\n}\nsettings['lightNotify'] = (settings['lightNotify'] == \"true\");\nmsg.payload = settings;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 840,
+        "wires": [
+            [
+                "2577d3509fe102dc",
+                "206d20c0b7e7dc25"
+            ]
+        ]
+    },
+    {
+        "id": "2577d3509fe102dc",
+        "type": "template",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload.lightRequirement}}",
+        "output": "str",
+        "x": 740,
+        "y": 860,
+        "wires": [
+            [
+                "aa72d1599b863a07",
+                "52f3d0aa2bfff300"
+            ]
+        ]
+    },
+    {
+        "id": "206d20c0b7e7dc25",
+        "type": "function",
+        "z": "b2a31b5d212f1d33",
+        "name": "function 6",
+        "func": "msg.payload = msg.payload[\"lightNotify\"];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 820,
+        "wires": [
+            [
+                "abf30f04508a7285",
+                "3953f6968060bc87"
+            ]
+        ]
+    },
+    {
+        "id": "3953f6968060bc87",
+        "type": "change",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lightNotify",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1220,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "52f3d0aa2bfff300",
+        "type": "change",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lightRequirement",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8ee5ab91b1500689",
+        "type": "exec",
+        "z": "b2a31b5d212f1d33",
+        "command": "python /home/csuti/Development/mail/mail.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 2030,
+        "y": 620,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a58dce7dddbc24da",
+        "type": "switch",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "property": "lightNotify",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1650,
+        "y": 620,
+        "wires": [
+            [
+                "c34e114cf5b02eaa"
+            ]
+        ]
+    },
+    {
+        "id": "c34e114cf5b02eaa",
+        "type": "template",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "\"Message from light sensor: \\\n{{payload}}\"",
+        "output": "str",
+        "x": 1780,
+        "y": 620,
+        "wires": [
+            [
+                "8ee5ab91b1500689"
+            ]
+        ]
+    },
+    {
+        "id": "a0c30254f53042bb",
+        "type": "switch",
+        "z": "b2a31b5d212f1d33",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "Appropriate",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1530,
+        "y": 620,
+        "wires": [
+            [],
+            [
+                "a58dce7dddbc24da"
+            ]
+        ]
+    },
+    {
+        "id": "56b0377d34231e65",
+        "type": "change",
+        "z": "9a04a22ed3e414b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "global",
+                "to": "timestamp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b58cc0563181ed66",
+        "type": "inject",
+        "z": "9a04a22ed3e414b4",
+        "name": "",
+        "props": [
+            {
+                "p": "timestamp",
+                "v": "object",
+                "vt": "date"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 270,
+        "y": 120,
+        "wires": [
+            [
+                "56b0377d34231e65"
+            ]
+        ]
+    },
+    {
+        "id": "d2e661da013272d2",
+        "type": "inject",
+        "z": "9a04a22ed3e414b4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "01 00 * * *",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "object",
+        "payloadType": "date",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "57444a162d6dfe95"
+            ]
+        ]
+    },
+    {
+        "id": "57444a162d6dfe95",
+        "type": "function",
+        "z": "9a04a22ed3e414b4",
+        "name": "function 5",
+        "func": "msg.dayOfWeek = msg.payload.getDay();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "7f1a53019c81ed14"
+            ]
+        ]
+    },
+    {
+        "id": "7f1a53019c81ed14",
+        "type": "change",
+        "z": "9a04a22ed3e414b4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dayOfWeek",
+                "pt": "global",
+                "to": "dayOfWeek",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    }
+]
