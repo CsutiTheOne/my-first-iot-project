@@ -1460,8 +1460,8 @@
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "",
-        "x": 1050,
+        "name": "mail notification",
+        "x": 960,
         "y": 220,
         "wires": [
             [],
@@ -2346,8 +2346,8 @@
         "timer": "",
         "winHide": false,
         "oldrc": false,
-        "name": "",
-        "x": 2030,
+        "name": "mail notification",
+        "x": 1940,
         "y": 620,
         "wires": [
             [],
