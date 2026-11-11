@@ -1,12 +1,17 @@
 import smtplib
 from email.message import EmailMessage
 import sys
+import json
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
-USERNAME = "csutarmark@gmail.com    "
-PASSWORD = open("/home/csuti/Development/mail/apppass", 'r').read().strip()
+
+with open("/home/csuti/Development/mail/creds.json", 'r') as f:
+    creds = json.load(f)
+
+USERNAME = creds["email"]
+PASSWORD = creds["apppass"]
 
 def notify(subject, text):
     msg = EmailMessage()
