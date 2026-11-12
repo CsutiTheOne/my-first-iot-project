@@ -1653,7 +1653,7 @@
         "id": "febf842775b94c0b",
         "type": "exec",
         "z": "2bfe3eded41fcf09",
-        "command": "python /home/csuti/Development/mail/mail.py",
+        "command": "./venv/bin/python3 ./scripts/mail.py",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
@@ -1665,7 +1665,9 @@
         "y": 220,
         "wires": [
             [],
-            [],
+            [
+                "07eb3a9c09c8177e"
+            ],
             []
         ]
     },
@@ -1791,6 +1793,22 @@
                 "febf842775b94c0b"
             ]
         ]
+    },
+    {
+        "id": "07eb3a9c09c8177e",
+        "type": "debug",
+        "z": "2bfe3eded41fcf09",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 240,
+        "wires": []
     },
     {
         "id": "1652b5904dc031e3",
@@ -2539,7 +2557,7 @@
         "id": "8ee5ab91b1500689",
         "type": "exec",
         "z": "b2a31b5d212f1d33",
-        "command": "python /home/csuti/Development/mail/mail.py",
+        "command": "./venv/bin/python3 ./scripts/mail.py",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",

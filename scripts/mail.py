@@ -7,7 +7,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
 
-with open("/home/csuti/Development/mail/creds.json", 'r') as f:
+with open("./scripts/creds.json", 'r') as f:
     creds = json.load(f)
 
 USERNAME = creds["email"]
