@@ -1793,6 +1793,45 @@
         ]
     },
     {
+        "id": "05301c85567a2a1f",
+        "type": "ui-event",
+        "z": "2bfe3eded41fcf09",
+        "ui": "9bbb9fe0fe9e5721",
+        "name": "",
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "298d608079b8e02c"
+            ]
+        ]
+    },
+    {
+        "id": "298d608079b8e02c",
+        "type": "switch",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "$pageview",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 500,
+        "wires": [
+            [
+                "fbf8c320f48b0e25"
+            ]
+        ]
+    },
+    {
         "id": "1652b5904dc031e3",
         "type": "mqtt in",
         "z": "b2a31b5d212f1d33",
