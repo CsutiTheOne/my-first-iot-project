@@ -1486,11 +1486,11 @@
         "y": 320,
         "wires": [
             [
-                "a222811385ee3848",
                 "1f087bf658af79ac",
                 "0ab2c93c5c6b690a",
                 "43839cef118992f9",
-                "4ad471fd2f9b222c"
+                "4ad471fd2f9b222c",
+                "9aa0d25b8a23d98a"
             ]
         ]
     },
@@ -1514,7 +1514,7 @@
         "className": "",
         "value": "payload",
         "valueType": "msg",
-        "x": 440,
+        "x": 540,
         "y": 320,
         "wires": []
     },
@@ -1545,7 +1545,7 @@
         "bins": 10,
         "action": "replace",
         "stackSeries": false,
-        "pointShape": "circle",
+        "pointShape": "rect",
         "pointRadius": 4,
         "showLegend": true,
         "removeOlder": "7",
@@ -1573,8 +1573,8 @@
         "width": 6,
         "height": 8,
         "className": "",
-        "interpolation": "linear",
-        "x": 880,
+        "interpolation": "step",
+        "x": 1040,
         "y": 360,
         "wires": [
             []
@@ -1828,6 +1828,65 @@
         "wires": [
             [
                 "fbf8c320f48b0e25"
+            ]
+        ]
+    },
+    {
+        "id": "9611d5dd1c1ecddd",
+        "type": "function",
+        "z": "2bfe3eded41fcf09",
+        "name": "Chat config",
+        "func": "msg.ui_update = {\n    chartOptions: {\n        yAxis: {\n            type: \"category\",\n            data: [\"Empty\", \"Medium\", \"High\"],\n            axisLabel: {\n                interval: 0\n            }\n        }\n    }\n};\n\ndelete msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 320,
+        "wires": [
+            [
+                "86dca19abb387e67"
+            ]
+        ]
+    },
+    {
+        "id": "7fba56b3ca8aa159",
+        "type": "inject",
+        "z": "2bfe3eded41fcf09",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 710,
+        "y": 320,
+        "wires": [
+            [
+                "9611d5dd1c1ecddd"
+            ]
+        ]
+    },
+    {
+        "id": "9aa0d25b8a23d98a",
+        "type": "function",
+        "z": "2bfe3eded41fcf09",
+        "name": "function 7",
+        "func": "let val = parseInt(msg.payload);\n\nmsg.payload = ['Empty', 'Medium', 'High'][val];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 320,
+        "wires": [
+            [
+                "a222811385ee3848"
             ]
         ]
     },
