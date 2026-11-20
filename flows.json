@@ -1404,7 +1404,7 @@
         "type": "function",
         "z": "552bef9e8447924e",
         "name": "led sunrise param",
-        "func": "msg.payload = `sunrise 1 ${msg.payload}`;\nreturn msg;",
+        "func": "msg.payload = `sunrise 40 ${msg.payload}`;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
