@@ -50,7 +50,7 @@
         "id": "f52bdd0175e7a595",
         "type": "junction",
         "z": "552bef9e8447924e",
-        "x": 340,
+        "x": 460,
         "y": 100,
         "wires": [
             [
@@ -101,7 +101,7 @@
         "id": "a038340f4e699bdb",
         "type": "junction",
         "z": "552bef9e8447924e",
-        "x": 1380,
+        "x": 1340,
         "y": 160,
         "wires": [
             [
@@ -417,7 +417,7 @@
         "correl": "",
         "expiry": "",
         "broker": "c3e89c64c905d4d7",
-        "x": 490,
+        "x": 610,
         "y": 40,
         "wires": []
     },
@@ -439,14 +439,14 @@
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "home/pc/alarm/start",
-        "payload": "start",
+        "topic": "home/pc/alarm/stop",
+        "payload": "stop",
         "payloadType": "str",
         "x": 140,
         "y": 60,
         "wires": [
             [
-                "f52bdd0175e7a595"
+                "487ee23d8dd56049"
             ]
         ]
     },
@@ -467,7 +467,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 460,
+        "x": 580,
         "y": 100,
         "wires": [
             [
@@ -487,7 +487,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "Turn off led",
-        "x": 990,
+        "x": 1110,
         "y": 100,
         "wires": [
             [],
@@ -529,10 +529,10 @@
         "pointerupPayload": "",
         "pointerupPayloadType": "str",
         "x": 140,
-        "y": 120,
+        "y": 140,
         "wires": [
             [
-                "f52bdd0175e7a595"
+                "487ee23d8dd56049"
             ]
         ]
     },
@@ -548,7 +548,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 1320,
+        "x": 1440,
         "y": 100,
         "wires": [
             [],
@@ -573,7 +573,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1140,
+        "x": 1260,
         "y": 100,
         "wires": [
             [
@@ -639,7 +639,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
+        "x": 590,
         "y": 160,
         "wires": [
             [
@@ -1335,7 +1335,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 830,
+        "x": 950,
         "y": 100,
         "wires": [
             [
@@ -1353,7 +1353,7 @@
         ],
         "linkType": "static",
         "timeout": "30",
-        "x": 670,
+        "x": 790,
         "y": 100,
         "wires": [
             [
@@ -1455,7 +1455,7 @@
         "z": "552bef9e8447924e",
         "name": "Stopping the alarm & reseting led strip",
         "info": "",
-        "x": 830,
+        "x": 950,
         "y": 20,
         "wires": []
     },
@@ -1468,6 +1468,47 @@
         "x": 720,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "487ee23d8dd56049",
+        "type": "change",
+        "z": "552bef9e8447924e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "home/pc/alarm/stop",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "msg",
+                "to": "iso",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "f52bdd0175e7a595"
+            ]
+        ]
     },
     {
         "id": "922e9045d72e267a",
